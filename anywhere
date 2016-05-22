@@ -1,0 +1,24 @@
+#!/usr/bin/env fibjs
+
+"use strict"
+/*
+fibjs 版本的 anywhere
+*/
+
+var http = require("http");
+var fs = require("fs");
+var process = require('process');
+var params = process.argv;
+
+var port = params[2] || "80";
+
+var svr = new http.Server("127.0.0.1", port, http.fileHandler(process.cwd()));
+
+svr.onerror({
+	500: function(v) {
+		console.error("[error] ", encoding.decodeURI(v.address));
+	}
+});
+console.notice("server now listen on 127.0.0.1:%s", port)
+svr.crossDomain = true;
+svr.run();
