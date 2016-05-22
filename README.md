@@ -6,7 +6,7 @@ anywhere 基于fibjs的随启随用的静态文件服务器
 ## Installation
 - git clone ...
 - chmod +x anywhere
-- add export export PATH=path/anywhere:$PATH into path [.bashrc or .bash_profile]
+- add export PATH=path/anywhere:$PATH into path [.bashrc or .bash_profile]
 - sudo anywhere
 
 ## Help
